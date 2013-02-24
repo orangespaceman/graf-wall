@@ -39,6 +39,9 @@ var startGraf = (function() {
     // set a mouse listener
     initMouseListener();
 
+    // add URL
+    addURL();
+
     // listen for sent events
     socket = io.connect();
 
@@ -109,6 +112,14 @@ var startGraf = (function() {
     drawContext.arc(graf.x, graf.y, graf.size, 0, Math.PI*2, true);
     drawContext.closePath();
     drawContext.fill();
+  },
+
+
+  /*
+   * add URL
+   */
+  addURL = function() {
+    document.getElementById("url").innerHTML = window.location.protocol + "//" + window.location.host;
   },
 
 
