@@ -6,7 +6,7 @@
  */
 var express     = require('express'),
     server      = express.createServer(),
-    io          = require("socket.io").listen(server),
+    io          = require("socket.io").listen(server,{"log level":0}),
     port        = process.env.PORT || process.env['app_port'] || 7004,
     connectCount= 0;
 
