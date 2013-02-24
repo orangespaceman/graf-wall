@@ -7,7 +7,8 @@
 var express     = require('express'),
     server      = express.createServer(),
     io          = require("socket.io").listen(server),
-    port        = process.env.PORT || process.env['app_port'] || 7004;
+    port        = process.env.PORT || process.env['app_port'] || 7004,
+    connectCount= 0;
 
 // serve static files, routes, etc
 server.use(express.query());
@@ -17,6 +18,15 @@ server.listen(port);
 
 // listen for socket.io connection
 io.sockets.on('connection', function (socket) {
+
+  connectCount++;
+  socket.broadcast.emit('connectCount', connectCount);
+
+  socket.on('disconnect', function() {
+    connectCount--;
+    socket.broadcast.emit('connectCount', connectCount);
+  });
+
   socket.on('mouse', function (data) {
     socket.broadcast.emit('mouse', data);
   });

@@ -52,6 +52,9 @@ var startGraf = (function() {
       });
     });
 
+    // update active user count
+    socket.on('connectCount', connectCount);
+
     // set a listener to reset canvas dimensions if ever the canvas is changed
     window.onresize = function(){
       getCanvasDimensions();
@@ -106,6 +109,14 @@ var startGraf = (function() {
     drawContext.arc(graf.x, graf.y, graf.size, 0, Math.PI*2, true);
     drawContext.closePath();
     drawContext.fill();
+  },
+
+
+  /*
+   * count connections
+   */
+  connectCount = function(data) {
+    document.getElementById("count").innerHTML = data;
   };
 
 
