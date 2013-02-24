@@ -47,8 +47,8 @@
         $this.html(wrappedText);
 
          var anim = CSSAnimations.create('rotate', {
-           '0%'  : { 'transform': 'rotate(-'+settings.angle+'deg);', '-webkit-transform': 'rotate(-'+settings.angle+'deg);' },
-           '100%': { 'transform': 'rotate( '+settings.angle+'deg);', '-webkit-transform': 'rotate( '+settings.angle+'deg);' }
+           '25%'      : { 'transform': 'rotate('+settings.angle+'deg);', '-webkit-transform': 'rotate('+settings.angle+'deg);' },
+           '75%'      : { 'transform': 'rotate(-'+settings.angle+'deg);', '-webkit-transform': 'rotate(-'+settings.angle+'deg);' }
          });
 
         $this.find('.'+settings.className).each(function(counter){
@@ -57,7 +57,7 @@
 
               'animation-name'           : settings.className,
               'animation-duration'       : settings.duration + "ms",
-              'animation-direction'      : settings.direction,
+//              'animation-direction'      : settings.direction,
               'animation-timing-function': settings.timing,
               'animation-iteration-count': settings.iteration,
               'animation-delay'          : (counter * settings.delay) + "ms",
