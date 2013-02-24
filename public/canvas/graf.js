@@ -88,11 +88,11 @@ var startGraf = (function() {
   },
 
   /*
-   * Create a new bubble
+   * Create a new line
    */
   draw = function(e){
 
-    // set initial bubble parameters
+    // set initial line parameters
     var graf = {
       x       : e.clientX || Math.round(canvasWidth * e.percentX),
       y       : e.clientY || Math.round(canvasHeight * e.percentY),

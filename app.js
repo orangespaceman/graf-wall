@@ -1,5 +1,5 @@
 /*
- * Node canvas bubbles controller
+ * Node graf
  *
  * $ node app.js
  *
