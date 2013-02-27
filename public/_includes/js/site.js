@@ -45,6 +45,16 @@
     log("remote", data);
   });
 
+  socket.on('connect', function (data) {
+    var transport = socket.socket.transport.name;
+    if (transport !== 'websocket') {
+        $("<p>")
+          .attr("id", "error")
+          .text("Your connection is slow, it could be improved by using a modern browser or connecting via wifi")
+          .insertAfter("#controls");
+    }
+  });
+
 
   // detect previous/next clicks
   function detectMouse() {

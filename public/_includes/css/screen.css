@@ -36,11 +36,11 @@
     width:100%;
     text-align:center;
     background:#f60;
-    font-size:2.8em;
+    font-size:2.4em;
     line-height:1;
     font-weight:normal;
     padding:0;
-    margin:0 auto 0.5em auto;
+    margin:0 auto 0.25em auto;
     box-shadow: 2px 2px 5px #888;
 
     -webkit-transition : all 0.25s ease-out;
@@ -56,7 +56,7 @@
 
   #drawhere {
     width:95%;
-    height:50%;
+    height:40%;
     display:table;
     margin:0 auto;
     border:1px solid #f90;
@@ -83,6 +83,19 @@
     display:block;
     float:left;
     width:50%;
+  }
+
+  p#error {
+    clear:both;
+    width:90%;
+    background:#f90;
+    color:#fff;
+    font-weight:bold;
+    font-style:italic;
+    padding:5px 2.5%;
+    border-radius:10px;
+    margin:20px auto;
+    font-size:1em;
   }
 
   /* controls */

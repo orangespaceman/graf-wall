@@ -16,6 +16,9 @@ server.use(express.static(__dirname + '/public'));
 server.use(express.favicon(__dirname + '/public/_includes/img/fav.ico'));
 server.listen(port);
 
+// test over long-polling (disable websockets)
+//io.set('transports', [ 'xhr-polling' ]);
+
 // listen for socket.io connection
 io.sockets.on('connection', function (socket) {
 
