@@ -1,6 +1,5 @@
 /*
  * Rotate and animate individual letters
- * @author petegoodman.com
  */
 (function( $ ) {
 

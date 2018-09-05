@@ -1,7 +1,5 @@
 /**
  * This file starts the graf
- *
- * @author petegoodman.com
  */
 var startGraf = (function() {
 
